@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block simple %}{%endblock%}
+
+{% block body %}
+
+
+<h1 class="w3-teal">Les acteurs qui ont joué dans le film {{ titre }}</h1>
+
+<ul class="w3-ul w3-border" > 
+{% for acteur in acteurs %}
+<li> {{ acteur.nomPrenom }} </li>
+	{% endfor %}
+</ul>
+
+
+{% endblock %}
+

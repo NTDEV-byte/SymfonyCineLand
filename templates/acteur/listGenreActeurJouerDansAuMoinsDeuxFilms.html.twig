@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+
+{% block simple %}{% endblock %}
+
+
+
+{% block body %} 
+
+
+
+
+{{form(form)}}
+
+<h2 class="w3-teal"> La liste des genres </h2>
+<div class = "w3-sand w3-ul w3-border" style="font-size:20px"> 
+
+{% for genre in genres %}
+
+{{ genre.nom }}
+
+{% endfor %}
+</div>
+
+{% endblock %}

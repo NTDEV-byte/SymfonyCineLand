@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+      
+
+
+
+
+    <head>
+    {% block head %}
+ 
+     {% block simple %} <link rel ="stylesheet" href="../css/simple.css">{% endblock %}
+     
+          {% block w3 %} <link rel ="stylesheet" href="../css/w3.css"> {% endblock %}
+
+          {% block bootstrap %} 
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+          {% endblock %}
+
+       {% endblock %} 
+       </head>
+
+
+
+   <body>
+   
+
+ {% block menu %} 
+
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+            <h2 class="w3-purple" ><a href="{{path('home')}} " style="text-decoration:none;" > CinéLand </a> </h2>
+            <a href="{{path('actions')}}" class="w3-bar-item w3-button">Actions</a>
+            <a href="{{path('film_menu')}}" class="w3-bar-item w3-button">Films</a>
+            <a href="{{path('acteur_menu')}}" class="w3-bar-item w3-button">Acteurs </a>
+            <a href="{{path('lister_genre')}}" class="w3-bar-item w3-button">Genres</a>
+            <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large w3-red">Fermer &times;</button>
+</div>  
+
+<div class="w3-teal">
+<div class = "box">
+  <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+   <h1>Menu CinéLand </h1>
+  </div>
+</div>
+
+     
+<script>
+function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+
+function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+  document.getElementById("rightMenu").style.display = "none";
+}
+</script>
+ {% endblock %} 
+
+  {% block body %}{% endblock %}
+
+
+    </body>
+
+</html>
+
+
+         

@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+
+{% block simple %}{% endblock %}
+
+
+
+{% block body %} 
+
+
+<h1 class="w3-teal">La liste des genres dans lequel chaque acteur a joué  </h1> 
+<table border ="1" class="w3-table w3-bordered w3-sand"> 
+
+<tr><th>Nom</th><th>Genre</th></tr>
+
+{% for genre in genres %}
+<tr>
+<td>
+{{ genre['nomPrenom'] }}
+</td>
+<td>
+{{ genre['nom'] }}
+</td>
+</tr>
+{% endfor %}
+
+
+</table>
+
+
+{% endblock %}

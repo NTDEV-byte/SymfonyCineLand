@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+   {% block simple %}{%endblock%}
+
+
+{% block body %}
+
+<h1>Augmenter ou diminuer la note d'un film </h1>
+
+<form  action="" method = "post" >
+
+<label for="Film">Veuillez rentrer le nom du film</label>
+
+<input type="text" name="titre" placeholder="nom du film " > </input><br>
+
+<input type="submit" value="-" name="boutton">  </input>
+<input type="submit" value="+" name="boutton">  </input><br>
+
+{% endblock %}

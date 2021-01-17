@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../../css/w3.css">
+</head>
+
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+            <h2 class="w3-purple">CinéLand</h2>
+            <a href="{{path('film_menu')}}" class="w3-bar-item w3-button">Films </a>
+            <a href="{{path('acteur_menu')}}" class="w3-bar-item w3-button">Acteurs </a>
+            <a href="{{path('lister_genre')}}" class="w3-bar-item w3-button">Genres</a>
+            <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large w3-red">Fermer &times;</button>
+</div>  
+
+
+<div class="w3-teal">
+
+<div class = "box">
+  <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+   <h1>Menu CinéLand </h1>
+  </div>
+
+
+</div>
+
+     
+<script>
+function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+
+function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+  document.getElementById("rightMenu").style.display = "none";
+}
+</script>
+
+       {% block body %} {% endblock %}
+
+
+
+<h1> La Listes des genres</h1>
+
+<ul class="w3-ul w3-card-4">
+	{% for genre in genres %}
+
+	 <li>{{genre.nom}}</li>
+
+	 {%endfor%}
+
+</ul>
+
+
+
+
+<button class="w3-button  w3-teal" style="width:100%;" ><a href="{{path('ajouter_genre')}}" style="text-decoration:none;"> ajouter un genre</a></button>
+<button class="w3-button  w3-teal" style="width:100%;" ><a href="{{path('delete_genre')}}" style="text-decoration:none;">  supprimer les genres rattaché a aucun film </a></button>
+
+
+    </body>
+
+	</html>

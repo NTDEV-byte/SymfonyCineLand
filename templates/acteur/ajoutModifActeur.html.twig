@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+
+{% block simple %}{% endblock %}
+{% block w3 %} <link rel ="stylesheet" href="../../css/w3.css"> {% endblock %}
+
+
+{% block body %}
+
+
+{% if modifier %}
+   
+<h1> Modifier acteur</h1>
+
+{% else %}
+
+
+<h1> ajouter acteur</h1>
+
+{% endif %}
+
+
+{{ form(monFormulaire) }}
+
+
+{% endblock %}

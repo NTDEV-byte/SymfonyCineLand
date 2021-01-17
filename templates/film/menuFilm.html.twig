@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block simple %}{% endblock %}
+{% block bootstrap %}{% endblock %}
+
+{% block body %}
+
+<h1> Liste des films </h1>
+
+
+
+   {% for film in films %}
+
+    <div class="w3-panel w3-sand w3-panel w3-leftbar w3-cursive" >
+         <a style="text-decoration:none;" href="{{path('afficher_film' ,{'id':film.id } )}}" > {{ film.titre }}</a>
+    </div>
+
+{% endfor %}
+
+
+
+<button class="w3-button  w3-teal" style="width:100%;" ><a href="{{path('lister_film_entre_dates')}}" style="text-decoration:none;"> Liste films entre deux années</a></button>
+<button class="w3-button  w3-teal" style="width:100%;" ><a href="{{path('lister_film_avant_date')}}" style="text-decoration:none;"> Liste des films anterieur a une date</a></button>
+<button class="w3-button  w3-teal" style="width:100%;" ><a href="{{path('recherche_avancer')}}" style="text-decoration:none;"> Recherche Avancée </a></button>
+<button class="w3-button  w3-teal" style="width:100%;" ><a href="{{path('affiche_duree_moyenne_genre')}}" style="text-decoration:none;"> Afficher La durée moyenne d'un genre </a></button>
+<button class="w3-button  w3-teal" style="width:100%;" ><a href="{{path('afficher_jouer_ensemble')}}" style="text-decoration:none;"> Acteur qui ont joué ensemble  </a></button>
+<button class="w3-button  w3-teal" style="width:100%;" ><a href="{{path('augmente_film_age')}}" style="text-decoration:none;"> augmenter age minimale d'un film </a></button>
+<button class="w3-button  w3-teal" style="width:100%;" ><a href="{{path('ajouter_film')}}" style="text-decoration:none;"> Ajouter un nouveau film </a></button>
+
+ {% endblock %}

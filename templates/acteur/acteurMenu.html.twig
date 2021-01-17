@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+
+{% block simple %}{% endblock %}
+
+{% block bootstrap %}{% endblock %}
+
+{% block body %}
+
+<h1> Liste des acteurs </h1>
+
+
+   {% for acteur in acteurs %}
+
+    <div class="w3-panel w3-sand w3-panel w3-leftbar w3-cursive" >
+         <a style="text-decoration:none;" href="{{path('afficher_acteur' ,{'id':acteur.id } )}}" > {{ acteur.nomPrenom }}</a>
+    </div>
+
+{% endfor %}
+
+<button class="w3-button  w3-teal" style="width:100%;" ><a href="{{path('liste_genre_acteur')}}" style="text-decoration:none;"> Les genres pour lesquels un acteur a joué au moins deux film </a></button>
+<button class="w3-button  w3-teal" style="width:100%;" ><a href="{{path('affiche_liste_genre')}}" style="text-decoration:none;"> Les genres pour lesquels chaque acteur a joué au moins un film </a></button>
+<button class="w3-button  w3-teal" style="width:100%;" ><a href="{{path('afficher_acteur_jouer_plus_trois_film')}}" style="text-decoration:none;"> Les acteurs qui ont joué au moins dans trois films</a></button>
+<button class="w3-button  w3-teal" style="width:100%;" ><a href="{{path('duree_total_jouer')}}" style="text-decoration:none;"> La durée totale jouée par un acteur  </a></button>
+<button class="w3-button  w3-teal" style="width:100%;" ><a href="{{path('list_film_ordonnee')}}" style="text-decoration:none;"> La liste des films dans lesquels chaque acteur a joué  </a></button>
+<button class="w3-button  w3-teal" style="width:100%;" ><a href="{{path('ajouter_acteur')}}" style="text-decoration:none;"> Ajouter un nouveau acteur </a></button>
+
+ {% endblock %}

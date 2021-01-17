@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link rel="stylesheet" href="../../css/w3.css">
+
+
+
+
+
+
+</head>
+
+
+<body>
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+            <h2 class="w3-purple">CinéLand</h2>
+            <a href="{{path('film_menu')}}" class="w3-bar-item w3-button">Films </a>
+            <a href="{{path('lister_acteur')}}" class="w3-bar-item w3-button">Acteurs </a>
+            <a href="{{path('lister_genre')}}" class="w3-bar-item w3-button">Genres</a>
+            <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large w3-red">Fermer &times;</button>
+</div>  
+
+<div class="w3-teal">
+
+<div class = "box">
+  <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+   <h1>Menu CinéLand </h1>
+  </div>
+
+
+</div>
+
+     
+<script>
+function openLeftMenu() {
+  document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+  document.getElementById("leftMenu").style.display = "none";
+}
+
+function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+  document.getElementById("rightMenu").style.display = "none";
+}
+</script>
+
+       {% block body %} {% endblock %}
+
+<h1 class="w3-center">Informations Film</h1>
+
+
+<ul class="w3-panel w3-leftbar w3-sand w3-xxlarge w3-serif w3-ul w3-border"">
+
+
+<li>ID: {{film.id}}</li>
+
+<li>Titre: {{film.titre}}</li>
+
+<li>Genre: {{film.genre}}</li>
+
+<li>Durée: {{film.duree}}</li>
+
+<li>Date Sortrie: {{film.dateSortie|date("Y-m-d")}}</li>
+
+<li>Note: {{film.note}}</li>
+
+<li>Age: {{film.ageMinimal}}</li>
+
+
+{% if afficheActeur %}
+
+<h2 class="w3-panel w3-green"> Les acteurs qui jouent dans dans le film</h2>
+<ul>
+
+  {% for acteur in acteurs%}
+
+        <li> {{acteur.nomPrenom}} </li>
+
+    {% endfor %}
+{% else %}
+
+
+{% endif %}
+
+</ul>
+
+</ul>
+<div class = "w3-center">
+<button class="w3-btn w3-blue " style="width:30%;"><a href="{{ path('modifier_film',{'id':film.id} )}}" style="text-decoration:none;">Modifier</a></button>  <button class="w3-btn w3-red" style="width:30%;"><a href="{{path('supprimer_film',{'id':film.id})}}" style="text-decoration:none;">Supprimer</a></button>
+</div>
+</body>
+
+</html>

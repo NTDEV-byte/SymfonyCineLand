@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block bootstrap %}{% endblock %}
+{% block simple %}{% endblock %}
+
+{% block body %}
+
+<h2 class="w3-teal">Liste des acteurs et films avec ordre chronologique</h2>
+<table border='1' class="w3-table w3-sand">
+<tr><th>Acteur</th><th>Film</th><th>Date Sortie</th></tr>
+
+{% for res in resultat %}
+
+
+   
+    <tr>
+        <td> {{res.nomPrenom}} </td>
+        <td> {{res.titre}} </td>
+        <td>{{res.dateSortie|date('d-m-Y')}}</td>
+    </tr>
+
+{% endfor %}
+</table>
+
+
+
+
+{% endblock %}

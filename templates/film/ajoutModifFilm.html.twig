@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block simple %} {% endblock %}
+
+{% block w3 %}  <link rel ="stylesheet" href="../../css/w3.css"> {% endblock %}
+{% block body %}
+      
+
+<h1 class = "w3-blue">
+{% if modifier %}
+
+    modification du film
+{% else %}
+
+   ajouter un Film
+
+{% endif %}
+
+</h1>
+
+
+{{form(monFormulaire)}}
+
+
+
+{% endblock %}
+
+
+
+   

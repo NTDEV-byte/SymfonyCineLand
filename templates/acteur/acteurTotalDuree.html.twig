@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block simple %}{% endblock %}
+{% block body %}
+
+
+{{form(form)}}
+
+
+
+{% if resultat %}
+<h1> La durée total joué est de <span class="w3-green">{{duree}} min</span> </h1>
+{% endif %}
+{% endblock %}

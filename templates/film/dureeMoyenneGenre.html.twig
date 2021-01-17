@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block simple %}{% endblock %}
+
+
+{% block body %}
+
+
+{{form(form)}}
+
+
+{% if duree !=null %}
+
+<h1> La durée Moyenne du genre {{genre}} est de <span class="w3-green">{{duree}}</span>minutes </h1>
+
+{% endif  %}
+
+{% endblock %}

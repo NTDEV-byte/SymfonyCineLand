@@ -1,0 +1,35 @@
+ {% extends 'base.html.twig' %}
+
+{% block simple %} {% endblock %}
+
+
+{% block body %}
+
+
+{{form(form)}}
+
+
+{% if films !=null %}
+
+
+<h1 class="w3-teal"> Liste des films </h1>
+
+{% for film in films %}
+
+<div class = "w3-sand w3-ul w3-border" style="font-size:20px"> 
+
+
+    {{ film.titre }}  
+
+</div> 
+
+
+{% endfor %}
+
+
+{% endif %}
+
+{%endblock%}
+
+
+

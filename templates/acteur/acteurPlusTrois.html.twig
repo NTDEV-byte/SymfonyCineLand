@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block simple %}{% endblock %}
+
+{% block body %} 
+
+<h1 class="w3-teal">la liste des acteurs qui ont joué dans au moins trois films</h1>
+<ul class="w3-ul w3-border"> 
+
+{% for acteur in acteurs %}
+
+
+	<li> {{ acteur.nomPrenom }} </li>
+	<li> </li>
+	
+	{% endfor %}
+
+</ul>
+
+{%endblock%}
+
+

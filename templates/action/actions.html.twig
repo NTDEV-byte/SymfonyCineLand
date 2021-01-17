@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block simple %}{%endblock%}
+{% block bootstrap %}{%endblock%}
+
+{% block body %}
+<h1> Voici la Liste des Actions complétées </h1>
+
+
+
+<ul class="w3-ul w3-border w3-center">
+
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('lister_genre')}}" style="text-decoration:none;"> Action 1</a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('ajouter_genre')}}" style="text-decoration:none;"> Action 2</a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('acteur_menu')}}" style="text-decoration:none;"> Action 3</a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('acteur_menu')}}" style="text-decoration:none;"> <p class="w3-tooltip"> Action 4 <span class = "w3-text"> <spans style="font-size:10px;" > Cliquez sur un acteur une fois la liste affiché  <span> </span></p></a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('ajouter_acteur')}}" style="text-decoration:none;"> Action 5 </a></li>
+
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('acteur_menu')}}" style="text-decoration:none;"> <p class="w3-tooltip"> Action 6 <span class = "w3-text"> <spans style="font-size:10px;" > Cliquez sur un acteur dans la liste une fois l'acteur choisi et cliquez sur le button modifié   <span> </span></p></a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('acteur_menu')}}" style="text-decoration:none;"> <p class="w3-tooltip"> Action 7 <span class = "w3-text"> <spans style="font-size:10px;" > Cliquez sur un acteur dans la liste une fois l'acteur choisi et cliquez sur le button supprimer   <span> </span></p></a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('film_menu')}}" style="text-decoration:none;"> Action 8</a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('film_menu')}}" style="text-decoration:none;"> <p class="w3-tooltip"> Action 9 <span class = "w3-text"> <spans style="font-size:10px;" > Cliquez sur un film une fois la liste affiché  <span> </span></p></a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('ajouter_film')}}" style="text-decoration:none;"> Action 10</a></li>
+
+
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('film_menu')}}" style="text-decoration:none;"> <p class="w3-tooltip"> Action 11 <span class = "w3-text"> <spans style="font-size:10px;" > Cliquez sur un film dans la liste une fois le film choisi cliquez sur le button modifié   <span> </span></p></a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('film_menu')}}" style="text-decoration:none;"> <p class="w3-tooltip"> Action 12 <span class = "w3-text"> <spans style="font-size:10px;" > Cliquez sur un film dans la liste une fois le film choisi cliquez sur le button supprimer   <span> </span></p></a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('lister_film_entre_dates')}}" style="text-decoration:none;"> Action 13</a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('lister_film_avant_date')}}" style="text-decoration:none;"> Action 14</a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('list_acteurs')}}" style="text-decoration:none;"> Action 15</a></li>
+
+
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('afficher_acteur_jouer_plus_trois_film')}}" style="text-decoration:none;"> Action 16</a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('afficher_jouer_ensemble')}}" style="text-decoration:none;"> Action 17</a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('liste_genre_acteur')}}" style="text-decoration:none;"> Action 18</a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('duree_total_jouer')}}" style="text-decoration:none;"> Action 19</a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('list_film_ordonnee')}}" style="text-decoration:none;"> Action 20</a></li>
+
+
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('affiche_liste_genre')}}" style="text-decoration:none;"> Action 21</a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('affiche_duree_moyenne_genre')}}" style="text-decoration:none;"> Action 22</a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('augmenter_diminuer_note')}}" style="text-decoration:none;"> Action 23</a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('delete_genre')}}" style="text-decoration:none;"> Action 24</a></li>
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('recherche_avancer')}}" style="text-decoration:none;"> Action 25</a></li>
+
+
+<li class="w3-li  w3-sand w3-hover-teal" style="width:30%;" ><a href="{{path('augmente_film_age')}}" style="text-decoration:none;"> Action 26</a></li>
+
+
+</ul>
+
+
+
+{%endblock%}
