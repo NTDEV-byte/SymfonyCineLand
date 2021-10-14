@@ -11,7 +11,7 @@ Prerequisite
 
 4- Run symfony server:start
 
-5- Brin Pop-Corn with you :()
+5- Bring Pop-Corn with you :()
 
 
 SymfonyCineLand 
